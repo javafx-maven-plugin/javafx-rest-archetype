@@ -12,19 +12,19 @@ Usage
 
 This will generate a multi-module Maven project with three modules:
 
-* *client module*: a simple JavaFX client that makes REST calls onto the server
-* *server module*: a simple SpringMVC REST server
-* *common module*: common classes shared between client and server (such as data beans)
+* _client module_: a simple JavaFX client that makes REST calls onto the server
+* _server module_: a simple SpringMVC REST server
+* _common module_: common classes shared between client and server (such as data beans)
 
-After creating the project you can build it using Maven commands. From the generated base project directory type:
+After creating the project you can build it using Maven commands. From the generated _base project_ directory type:
 
     mvn clean install
 
-Run the server from the base directory of the *server module* using:
+Run the server from the base directory of the _server module_ using:
 
     mvn jetty:run
 
-Run the client from the base directory of the *client module* using:
+Run the client from the base directory of the _client module_ using:
 
     mvn jfx:run
 
