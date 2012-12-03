@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    A simple FXML file that displays a WelcomeView. This view allows the user to enter their name and then  send this to
+    the server for processing. The FXML provides the 'view' only part of the Control and is focused on layout and
+    visual styling only. The actual logic (i.e. control) backing the view is provided by the WelcomeController. When
+    loaded via the FXMLLoader, the WelcomeController referenced in the fx:controller value will be automatically
+    created and bound to this view.
+-->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<!--
+    We use an id of 'root' which the controller then binds to. The name is arbitrary (you could call it 'view' for
+    example), but whatever the name you need to provide some way for the Controller to get access to this view since
+    by default FXML does not link the dependency this way.
+ -->
+<BorderPane fx:id="root"
+            styleClass="mainContent"
+            fx:controller="${package}.client.WelcomeController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <!-- top level bar with the name field and button on it -->
+        <HBox styleClass="topBar" spacing="10">
+            <Label text="Enter your name"/>
+            <TextField fx:id="nameField" prefColumnCount="20" onAction="#sayHello"/>
+            <Button fx:id="sayHelloButton" text="Say Hello" onAction="#sayHello"/>
+            <ProgressIndicator fx:id="loadingIndicator" visible="false" maxHeight="10"/>
+        </HBox>
+    </top>
+
+    <center>
+        <!-- response area used for showing messages returned from the server -->
+        <TextArea fx:id="messageArea" styleClass="messageArea" editable="false"/>
+    </center>
+
+</BorderPane>

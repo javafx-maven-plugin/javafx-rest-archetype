@@ -1,0 +1,17 @@
+/*
+    Styles for the application. Generally these will be referenced in the FXML via the 'styleClass' attribute on Nodes
+    for more information on styles and styling in JavaFX see:
+    http://docs.oracle.com/javafx/1.3/tutorials/UIControls/theming.html
+*/
+
+.mainContent {
+    -fx-padding: 20px;
+}
+
+.topBar {
+    -fx-padding: 0 0 10px 0;
+}
+
+.messageArea {
+}
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    The main Maven module definition for the 'common' module. The common module has all the classes in it that are
+    shared between the client and server (such as the Data Transfer Objects used to send data between the client and
+    server). In general try to keep your common module as clean as possible so there is no server (e.g. web or database)
+    or client (e.g. JavaFX) dependencies in this module.
+
+    When built, this 'common' module will be bundled into it's own JAR. That JAR will then become a dependency of both
+    the 'client' and 'server' modules, with each getting it's own copy of the JAR bundled into it's deployment bundle.
+    This need for a separate JAR is why we have a separate module for it. As a general rule, Maven has a policy of one
+    Module producing one output, so we have a common module producing a JAR, a server module producing a WAR and a
+    client module producing a JFX app (the exact format of which is up to you to choose).
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- this module is part of the bigger project, this allows us to build the whole project in one hit -->
+    <parent>
+        <groupId>${groupId}</groupId>
+        <artifactId>${rootArtifactId}</artifactId>
+        <version>${version}</version>
+    </parent>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <packaging>jar</packaging>
+
+</project>

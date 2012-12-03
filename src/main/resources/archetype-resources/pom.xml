@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    The main parent project definition for the entire application (server and client). This defines the modules that
+    make up the project so that they can be built as one (and opened as a single project in an IDE). This top level
+    POM does not provide any build steps itself but is just an aggregator of the modules.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <packaging>pom</packaging>
+
+    <!-- organisation is needed by the JavaFX plugin but we define it here for general use -->
+    <organization>
+        <name>My Organisation</name>
+    </organization>
+
+    <!-- define the common properties used throughout the modules - allows us to keep things consistent -->
+    <properties>
+        <org.springframework.version>3.1.3.RELEASE</org.springframework.version>
+        <org.slf4j.version>1.6.1</org.slf4j.version>
+        <org.codehaus.jackson.version>1.9.5</org.codehaus.jackson.version>
+        <log4j.version>1.2.16</log4j.version>
+    </properties>
+
+    <!-- define the sub-modules - Maven will work out the build order based on their inter-dependencies -->
+
+</project>

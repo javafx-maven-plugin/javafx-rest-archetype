@@ -1,0 +1,42 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!--
+    Configures the logging levels and output formats that you want to use. This is a very simple example file provided
+    here. For more information see: http://logging.apache.org/log4j/2.x/manual/configuration.html
+-->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!--
+        We log only to the console in this simple setup but you could add additional appenders to log to files, etc.
+    -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <!--
+        By default we want to see all of our DEBUG log or higher, you might want to fine tune this for a production
+        environment.
+    -->
+    <logger name="${package}">
+        <level value="DEBUG"/>
+    </logger>
+
+    <!--
+        Generally we don't care too much about logging outside of our own code (unless something goes wrong) so we
+        default to only getting WARN or higher messages from everyone else. You can add any number of custom loggers
+        (copy the snippet above and change the 'name') to fine tune what log you receive from each package/module.
+    -->
+    <root>
+        <priority value ="WARN" />
+        <appender-ref ref="console" />
+    </root>
+
+</log4j:configuration>
