@@ -35,13 +35,14 @@ Development and Deployment
 This is just a quick starter. You most likely will want to open the base level POM in your favorite IDE and develop
 your project to your needs.
 
-To deploy your server, you can run
+To build a deployment WAR for your server, run the following from the **base project** directory:
 
     mvn clean install
 
 And then copy the WAR file from the target directory and deploy this to your web server (e.g. Tomcat).
 
-To deploy your client, you can use one of the JavaFX distribution mechanisms, such as:
+To build a deployment bundle for your client, run one of the JavaFX distribution mechanisms from the **client module**
+base directory, such as:
 
     mvn clean jfx:build-jar
 
