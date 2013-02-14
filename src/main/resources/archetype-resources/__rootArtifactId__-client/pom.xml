@@ -33,7 +33,7 @@
             <plugin>
                 <groupId>com.zenjava</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>1.3</version>
+                <version>1.4</version>
                 <configuration>
 
                     <!-- we need to tell the plugin which class to launch but it figures out most of the rest -->
