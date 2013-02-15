@@ -1,4 +1,4 @@
-JaavFX REST Archetype
+JavaFX REST Archetype
 =====================
 
 A Maven archetype for generating a basic JavaFX REST client-server starter project.
