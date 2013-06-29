@@ -17,7 +17,7 @@
 
     <!-- organisation is needed by the JavaFX plugin but we define it here for general use -->
     <organization>
-        <name>My Organisation</name>
+        <name>${organizationName}</name>
     </organization>
 
     <!-- define the common properties used throughout the modules - allows us to keep things consistent -->

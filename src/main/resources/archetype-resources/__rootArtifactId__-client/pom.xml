@@ -23,6 +23,9 @@
     <packaging>jar</packaging>
 
     <build>
+
+        <finalName>${artifactId}</finalName>
+
         <plugins>
 
             <!--
