@@ -27,7 +27,7 @@
 
     <groupId>com.zenjava</groupId>
     <artifactId>javafx-rest-archetype</artifactId>
-    <version>8.1.5</version>
+    <version>8.1.6-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>JavaFX REST Archetype</name>
