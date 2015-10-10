@@ -1,13 +1,13 @@
 JavaFX REST Archetype
 =====================
 
-A Maven archetype for generating a basic JavaFX REST client-server starter project.
+A Maven archetype for generating a basic JavaFX REST client-server starter project using Jetty and SpringFramework.
 
 Usage
 ======
 
 ```
- mvn archetype:generate -DarchetypeGroupId=com.zenjava -DarchetypeArtifactId=javafx-rest-archetype -DarchetypeVersion=1.0
+ mvn archetype:generate -DarchetypeGroupId=com.zenjava -DarchetypeArtifactId=javafx-rest-archetype
 ```
 
 This will generate a multi-module Maven project with three modules:
@@ -24,9 +24,7 @@ Run the server from the base directory of the **server module** using:
 
     mvn jetty:run
 
-Run the client from the base directory of the **client module** using:
-
-    mvn jfx:run
+Run the client from the base directory of the **client module** (using `mvn jfx:run` is **deprecated**, because it does not respect launcher-settings).
 
 
 Development and Deployment
@@ -44,12 +42,9 @@ And then copy the WAR file from the target directory and deploy this to your web
 To build a deployment bundle for your client, run one of the JavaFX distribution mechanisms from the **client module**
 base directory, such as:
 
-    mvn clean jfx:build-jar
+    mvn clean jfx:jar
 
-Which will build an executable JAR that you can double click to launch your client application. Alternatively see the
-JavaFX Maven Plugin for alternate ways to deploy, including Webstart and native installers:
-
-https://github.com/zonski/javafx-maven-plugin/wiki
+Which will build an executable JAR that you can execute(e.g. via double-clicking) to launch your client application.
 
 
 Licence
